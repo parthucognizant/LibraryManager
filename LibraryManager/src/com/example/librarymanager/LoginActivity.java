@@ -75,7 +75,7 @@ public class LoginActivity extends ActionBarActivity {
 				String result = null;
 
 				HttpClient httpClient = new DefaultHttpClient();
-				HttpPost httpPost = new HttpPost("http://10.0.2.2:800/androidconnect.php");
+				HttpPost httpPost = new HttpPost("http://10.0.2.2:800/lm/login.php");
 				httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 				HttpResponse response = httpClient.execute(httpPost);
 				HttpEntity entity = response.getEntity();
