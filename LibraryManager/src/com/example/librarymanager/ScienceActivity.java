@@ -15,17 +15,20 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class ScienceActivity extends Fragment {
+public class ScienceActivity extends Fragment implements OnItemClickListener {
 
 	ListView sciencelist;
 
@@ -50,6 +53,8 @@ public class ScienceActivity extends Fragment {
 
 		sciencearray = new ArrayList<HashMap<String,String>>();
 		getData();
+
+		sciencelist.setOnItemClickListener(this);
 
 		return rootView;
 	}
@@ -133,6 +138,25 @@ public class ScienceActivity extends Fragment {
 		}catch (JSONException e) {
 			e.printStackTrace();
 		}
+
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		// TODO Auto-generated method stub
+
+
+		String bid=sciencearray.get(position).get("id");
+		String bname=sciencearray.get(position).get("name");
+		String bcategory=sciencearray.get(position).get("category");
+		//Log.i(TAG, ""+id+"="+name1+"="+cate);
+		Intent detailsintent  = new Intent(getActivity(),BookDetailsActivity.class );
+		detailsintent.putExtra("id", bid);
+		detailsintent.putExtra("name", bname);
+		detailsintent.putExtra("category", bcategory);
+		startActivity(detailsintent);
+
+
 
 	}
 

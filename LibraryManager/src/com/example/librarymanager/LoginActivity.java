@@ -102,6 +102,7 @@ public class LoginActivity extends ActionBarActivity {
 			pDialog.hide();
 			if((result.trim()).equalsIgnoreCase("success")){
 				Intent bookintent = new Intent(LoginActivity.this, BooksActivity.class);
+				bookintent.putExtra("username", username.getText().toString());
 				startActivity(bookintent);
 			}
 			else

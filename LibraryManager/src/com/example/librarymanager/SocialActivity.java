@@ -15,6 +15,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -39,6 +40,8 @@ public class SocialActivity extends Fragment implements OnItemClickListener {
 	private static final String TAG_ADD ="category";
 	private static final String TAG_DETAILS ="details";
 
+	private static final String TAG = "SocialActivity";
+
 	JSONArray jsonsocial = null;
 
 	ArrayList<HashMap<String, String>> socialarray;
@@ -51,11 +54,11 @@ public class SocialActivity extends Fragment implements OnItemClickListener {
 
 		sociallist = (ListView)rootView.findViewById(R.id.social_list);
 
-		sociallist.setOnItemClickListener(this);
+
 
 		socialarray = new ArrayList<HashMap<String,String>>();
 		getData();
-
+		sociallist.setOnItemClickListener(this);
 		return rootView;
 	}
 	private void getData() {
@@ -143,9 +146,20 @@ public class SocialActivity extends Fragment implements OnItemClickListener {
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		// TODO Auto-generated method stub
 
-		//String bid = (String) (sociallist.getItemAtPosition(position));
-		//Toast.makeText(getActivity(), bid, Toast.LENGTH_SHORT).show();
+
+		String bid=socialarray.get(position).get("id");
+		String bname=socialarray.get(position).get("name");
+		String bcategory=socialarray.get(position).get("category");
+		//Log.i(TAG, ""+id+"="+name1+"="+cate);
+		Intent detailsintent  = new Intent(getActivity(),BookDetailsActivity.class );
+		detailsintent.putExtra("id", bid);
+		detailsintent.putExtra("name", bname);
+		detailsintent.putExtra("category", bcategory);
+		startActivity(detailsintent);
+
+
 
 	}
+
 
 }

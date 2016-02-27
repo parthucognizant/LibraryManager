@@ -49,6 +49,10 @@
             android:name=".SocialActivity"
             android:label="@string/title_activity_social" >
         </activity>
+        <activity
+            android:name=".BookDetailsActivity"
+            android:label="@string/title_activity_book_details" >
+        </activity>
     </application>
 
 </manifest>
