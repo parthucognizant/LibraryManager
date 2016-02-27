@@ -19,6 +19,9 @@
     <string name="title_activity_economics">EconomicsActivity</string>
     <string name="title_activity_science">ScienceActivity</string>
     <string name="title_activity_social">SocialActivity</string>
-    <string name="title_activity_book_details">BookDetailsActivity</string>
+    <string name="login_title">Login</string>
+    <string name="submit_button">Submit</string>
+    <string name="Register_here">Register Here!</string>
+    <string name="Sign_up">Sign Up</string>
 
 </resources>
