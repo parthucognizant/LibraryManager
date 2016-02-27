@@ -20,6 +20,7 @@ public class BooksActivity extends FragmentActivity implements ActionBar.TabList
 	private ViewPager viewPager;
 	private TabsPagerAdapter mAdapter;
 	private android.app.ActionBar actionBar;
+	String username;
 	// Tab titles
 	private final String[] tabs = { "Economics", "Science", "Social" };
 
@@ -28,6 +29,12 @@ public class BooksActivity extends FragmentActivity implements ActionBar.TabList
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_books);
+
+		/*username= getIntent().getStringExtra("username");
+		Fragment fragment = new Fragment();
+		 Bundle bundle = new Bundle();
+		 bundle.putInt("username", username);
+		 fragment.setArguments(bundle);*/
 
 		// Initilization
 		viewPager = (ViewPager) findViewById(R.id.pager);
