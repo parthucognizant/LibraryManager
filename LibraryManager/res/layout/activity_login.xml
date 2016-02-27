@@ -39,11 +39,11 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/app_icon" />
+                android:background="@drawable/book" />
 
             <EditText
                 android:id="@+id/username_edit"
@@ -62,18 +62,14 @@
                 android:layout_marginTop="15dp"
                 android:background="#f3f3f3"
                 android:hint="@string/login_password"
+                android:inputType="textPassword"
                 android:paddingLeft="5dp"
                 android:textColor="#20B2AA" />
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal" >
-            </LinearLayout>
+            
 
             <Button
+                android:id="@+id/login_button"
                 android:layout_width="190dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center_horizontal"

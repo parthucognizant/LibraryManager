@@ -6,14 +6,14 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:background="#13b586"
         android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="60dp"
-            android:layout_alignParentTop="true"
+           
             android:background="#e8e8e7"
             android:orientation="horizontal" >
 
@@ -45,12 +45,12 @@
             android:background="@drawable/greybackground"
             android:orientation="vertical" >
 
-            <ImageView
+             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/app_icon" />
+                android:background="@drawable/book" />
 
             <EditText
                 android:id="@+id/name_edit"
@@ -89,6 +89,17 @@
                 android:hint="@string/signup_phone_number"
                 android:inputType="phone"
                 android:paddingLeft="5dp" />
+            
+            <EditText
+                android:id="@+id/username_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="@string/signup_username"
+                android:paddingLeft="5dp" />
+            
+            
 <Button
     			android:id="@+id/signup_add_btn"
                 android:layout_width="190dp"
@@ -96,6 +107,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:background="#13b586"
+                android:onClick="signUp"
                 android:text="@string/signup_add_account"
                 android:textColor="#fff"
                 android:textSize="13sp" />

@@ -28,8 +28,8 @@ public class MainActivity extends ActionBarActivity {
 
 	public void loginClick(View v){
 		Log.i(TAG,constants.logs.loginClick);
-		Intent signupintent = new Intent(this, LoginActivity.class);
-		startActivity(signupintent);
+		Intent loginintent = new Intent(this, LoginActivity.class);
+		startActivity(loginintent);
 		//Toast.makeText(this, "Login clicked", Toast.LENGTH_SHORT).show();
 	}
 }

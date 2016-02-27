@@ -100,16 +100,20 @@ public class LoginActivity extends ActionBarActivity {
 			// TODO Auto-generated method stub
 			//super.onPostExecute(result);
 			pDialog.hide();
-			if((result.trim()).equalsIgnoreCase("success")){
+			if((result.trim()).equalsIgnoreCase("student")){
 				Intent bookintent = new Intent(LoginActivity.this, BooksActivity.class);
 				bookintent.putExtra("username", username.getText().toString());
 				startActivity(bookintent);
+			}
+			else if((result.trim()).equalsIgnoreCase("admin")){
+				Intent adminintent = new Intent(LoginActivity.this, AdminActivity.class);
+				startActivity(adminintent);
+
 			}
 			else
 			{
 				Toast.makeText(LoginActivity.this, result, Toast.LENGTH_SHORT).show();
 			}
-
 		}
 	}
 }

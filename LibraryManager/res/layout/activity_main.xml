@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.librarymanager.MainActivity" >
 
-    <Button
+    <!-- <Button
         android:id="@+id/signup_btn"
         android:layout_width="177dp"
         android:layout_height="60dp"
@@ -18,7 +18,7 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/state"
         android:text="@string/main_signup"
-        android:onClick="signupClick"
+        
         android:textColor="#9933FF"
         android:textSize="30sp" />
 
@@ -31,15 +31,16 @@
         android:layout_marginTop="36dp"
         android:background="@drawable/state"
         android:text="@string/main_Login"
-        android:onClick="loginClick"
+        
         android:textColor="#9933FF"
-        android:textSize="30sp" />
+        android:textSize="30sp" /> -->
 
     <Button
+         android:id="@+id/signup_btn"
         android:layout_width="190dp"
         android:layout_height="60dp"
-        android:layout_alignLeft="@+id/signup_btn"
-        android:layout_alignTop="@+id/signup_btn"
+        android:layout_alignLeft="@+id/login_btn"
+        android:layout_alignParentTop="true"
         android:background="@drawable/button_background"
         android:onClick="loginClick"
         android:text="@string/main_Login"
@@ -49,16 +50,17 @@
         android:textSize="15sp" />
 
     <Button
+        android:id="@+id/login_btn"
         android:layout_width="190dp"
-        android:layout_height="38dp"
-        android:layout_alignBottom="@+id/login_btn"
-        android:layout_alignLeft="@+id/login_btn"
-        android:layout_alignTop="@+id/login_btn"
+        android:layout_height="60dp"
+        android:layout_below="@+id/signup_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
         android:background="@drawable/button_background"
         android:onClick="signupClick"
         android:text="@string/main_signup"
-        android:textStyle="bold"
         android:textColor="#fff"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:textStyle="bold" />
     
 </RelativeLayout>
